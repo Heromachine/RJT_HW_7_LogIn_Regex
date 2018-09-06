@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_signin_signin"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:text="Sign In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtx_signin_dob" />
+
+    <EditText
+        android:id="@+id/edtx_signin_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="164dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtx_signin_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtx_signin_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/edtx_signin_email"
+        app:layout_constraintStart_toStartOf="@+id/edtx_signin_username"
+        app:layout_constraintTop_toBottomOf="@+id/edtx_signin_username" />
+
+    <EditText
+        android:id="@+id/edtx_signin_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="DOB: mm/dd/yyyy"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_signin_signin"
+        app:layout_constraintStart_toStartOf="@+id/edtx_signin_email"
+        app:layout_constraintTop_toBottomOf="@+id/edtx_signin_email" />
+
+    <EditText
+        android:id="@+id/edtx_signin_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:hint="E-Mail"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtx_signin_dob"
+        app:layout_constraintStart_toStartOf="@+id/edtx_signin_password"
+        app:layout_constraintTop_toBottomOf="@+id/edtx_signin_password" />
+
+</android.support.constraint.ConstraintLayout>
