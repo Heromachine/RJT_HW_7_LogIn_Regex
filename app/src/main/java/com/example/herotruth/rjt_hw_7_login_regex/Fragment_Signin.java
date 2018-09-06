@@ -4,20 +4,25 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.EventLogTags;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class Fragment_Signin extends Fragment {
+    private static final String TAG = "Fragment_Signin";
 
     Button btnSignIn;
     String [] sTextViews ;
-    TextView username;
-    TextView password;
-    TextView email;
-    TextView dob;
+
+    EditText username;
+    EditText password;
+    EditText email;
+    EditText dob;
 
     private static final String USERNAME_PATTERN = "^[ A-Za-z0-9._-]{3,15}$";
     private static final String PASSWORD_PATTERN = "^[A-Za-z0-9.-_!]{6,18}$";
@@ -64,23 +69,25 @@ public class Fragment_Signin extends Fragment {
 
         btnSignIn.setOnClickListener(new View.OnClickListener()
         {
-
-
-
-
             @Override
-            public void onClick(View v) {
-
-
-                System.out.println(username.getText().toString());
+            public void onClick(View v)
+            {
+                Log.d(TAG, "onClick: USERNAME= "+ username.getText().toString());
+                Log.d(TAG, "onClick: DATE = "+ dob.getText().toString());
                 IV.addTextViewString(username.getText().toString());
-                IV.addTextViewString(password.toString());
-                IV.addTextViewString(email.toString());
-                IV.addTextViewString(dob.toString());
+                IV.addTextViewString(password.getText().toString());
+                IV.addTextViewString(email.getText().toString());
+                IV.addTextViewString(dob.getText().toString());
+                System.out.println(username.getText().toString());
+
+
+
                 IV.validation(getActivity());
 
             }
         });
+
+
         return view;
 
 
